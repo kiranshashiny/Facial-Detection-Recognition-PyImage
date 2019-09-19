@@ -5,7 +5,7 @@ then
 	
 	echo "" 
 	echo "	Error : Please enter the folder to output the images"
-	echo "	Edit this file e.g;  --dataset/shashi"
+	echo "	./build_dataset.sh  dataset/shashi"
 	echo "	Exiting ! "
 	echo ""
 	exit
@@ -19,6 +19,8 @@ then
 		echo "Exiting"
 	else
 		#echo "Directory exists - using it to store new images."
+		echo "Press 'k' to create new images, and press 'q' to exit"
+		echo "Focus on the image while pressing keys"
 		python3 build_face_dataset.py --cascade haarcascade_frontalface_default.xml  --output $1
 	fi
 
